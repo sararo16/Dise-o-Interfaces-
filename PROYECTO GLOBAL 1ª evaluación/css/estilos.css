@@ -35,11 +35,70 @@ body{
 }
 .navegacion{
     background: #222;
+    padding:1rem 1rem;
 }
-.listado button{
-    background: #444;
+.listado {
+    display:flex;
+    justify-content: center;
+    list-style: none;
+    gap:30px;
+    margin:0;
+    padding:0; 
+}
+
+.listado button {
+    background:none;
     color:#fff;
-    border: none;
-    pad
-    
+    border:none;
+    padding:0.5rem 0;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+   
 }
+.pie-foto{
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+    margin:5px auto 30px auto;
+    max-width: 500px;
+}
+.card .pie-foto{
+   text-align: center;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+    margin:5px 0 10px 0;
+}
+/* Historia y origen */
+.historia{
+    padding: 50px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.historia h3{
+    text-align: center;
+    font-size: 2.5em;
+    color: #0077b6;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #0077b6;  
+}
+
+.historia p{
+   margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.historia img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 30px auto 10px auto;
+    max-width: 500px;
+}
+
