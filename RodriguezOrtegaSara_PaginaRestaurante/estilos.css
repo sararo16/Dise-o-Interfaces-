@@ -1,0 +1,358 @@
+
+/* 
+Estilos para la página web del restaurante "Las Maldivas".
+Incluye estilos para el carrusel, la navegación, el formulario de reserva y más.
+*/
+
+
+/* Estilos generales para la página */
+body {
+    font-family: 'Raleway', sans-serif; /* Fuente moderna y minimalista */
+    margin: 0; /* Elimina el margen para que la página se adapte al contenedor */
+    padding: 0; /* Elimina el relleno para que la página se adapte al contenedor */
+    background-image: url('imagenes/fondo.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen a la pantalla */
+    background-position: center; /* Posiciona la imagen en el centro */
+    background-attachment: fixed; /* Fija la imagen en la pantalla */
+    color: #FEFAE0; /* Texto del titulo y subtitulo para contrastar */
+    display: flex; /* Configura la página para que se adapte a diferentes dispositivos */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Alinea los elementos en el centro */
+    min-height: 100vh; /* Establece el tamaño mínimo de la página */
+    position: relative; /* Configura la posición de los elementos */
+}
+
+/* Overlay oscuro para mejorar la legibilidad */
+body::before {
+    content: ''; /* Contenido vacío */
+    position: absolute; /* Posicionar absolutamente */
+    top: 0; /* Posicionar en la parte superior */
+    left: 0; /* Posicionar en la parte izquierda */
+    width: 100%; /* Ancho del elemento */
+    height: 100%; /* Altura del elemento */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo */
+    z-index: -1; /* Posicionar debajo del contenido */
+}
+
+/* Encabezado */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 20px 10px; /* Relleno del encabezado */
+    text-align: center; /* Centrar texto del encabezado */
+    width: 100%; /* Ocupar todo el ancho del encabezado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para mejorar la legibilidad */
+    z-index: 1; /* Asegurar que esté por encima del overlay */
+}
+
+/* Estilos para el título dentro del encabezado */
+header h1 {
+    font-size: 3rem; /* Tamaño de la fuente */
+    margin: 0; /* Sin márgenes para el título */
+    font-family: 'Playfair Display', serif; /* Fuente elegante para el título */
+    text-transform: uppercase; /* Convertir a mayúsculas */
+    letter-spacing: 5px; /* Espacio entre las letras */
+}
+
+/* Estilos para el párrafo dentro del encabezado */
+header p {
+    background-color: rgba(68, 68, 68, 0.8); /* Fondo semi-transparente */
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    margin: 10px 0 0; /* Márgenes para el párrafo */
+    font-style: italic; /* Estilo de la fuente */
+    padding: 10px; /* Relleno interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Carrusel */
+.carousel {
+    position: relative; /* Posicionar la imagen */
+    width: 100%; /* Ocupar todo el ancho */
+    max-width: 1200px; /* Ancho máximo */
+    margin: 20px auto; /* Márgenes para la imagen */
+    overflow: hidden; /* Ocultar el contenido que sobrepasa */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Contenedor de las imágenes */
+.carousel-images {
+    display: flex; /* Usar flexbox para organizar las imágenes */
+    width: 100%; /* Ocupar todo el ancho */
+    transition: transform 0.5s ease-in-out; /* Transición suave */
+}
+
+/* Cada imagen del carrusel */
+.carousel-item {
+    min-width: 100%; /* Ancho mínimo */
+    box-sizing: border-box; /* Incluir padding y bordes en el tamaño */
+}
+
+.carousel-item img {
+    width: 100%; /* Ocupar todo el ancho */
+    height: 500px; /* Altura de la imagen */
+    object-fit: cover; /* Ajustar la imagen sin deformarla */
+    display: block; /* Eliminar espacios extra debajo de la imagen */
+}
+
+/* Controles del carrusel */
+.carousel-controls {
+    position: absolute; /* Posicionar los controles */
+    bottom: 20px; /* Posición desde abajo */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Ajustar al centro */
+    display: flex; /* Usar flexbox para organizar los controles */
+    gap: 10px; /* Espacio entre los controles */
+}
+
+.carousel-controls label {
+    cursor: pointer; /* Cursor de puntero */
+    width: 15px; /* Ancho de los controles */
+    height: 15px; /* Altura de los controles */
+    background-color: rgba(255, 255, 255, 0.5); /* Color semi-transparente */
+    border-radius: 50%; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.carousel-controls label:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Color semi-transparente al pasar el ratón */
+}
+
+/* Ocultar los radios */
+input[type="radio"] {
+    display: none;
+}
+
+/* Mostrar la imagen activa */
+#slide1:checked ~ .carousel-images {
+    transform: translateX(0%); /* Posicionar la primera imagen */
+}
+
+#slide2:checked ~ .carousel-images {
+    transform: translateX(-100%); /* Posicionar la segunda imagen */
+}
+
+#slide3:checked ~ .carousel-images {
+    transform: translateX(-200%); /* Posicionar la tercera imagen */
+}
+
+#slide4:checked ~ .carousel-images {
+    transform: translateX(-300%); /* Posicionar la cuarta imagen */
+}
+
+#slide5:checked ~ .carousel-images {
+    transform: translateX(-400%); /* Posicionar la quinta imagen */
+} 
+
+#slide6:checked ~ .carousel-images {
+    transform: translateX(-500%); /* Posicionar la sexta imagen */
+}
+
+/* Estilos generales para la sección de descripción */
+.descripcion{ 
+text-align: center;  /* Alinea el texto en el centro */
+padding: 50px 20px;  /* Espacio entre el texto y los bordes */
+background-color: rgba(68, 68, 68, 0.8);  /* Color de fondo */
+border-radius: 10px; /* Bordes redondeados */
+max-width: 900px; /* Ancho máximo */
+margin:50px; /* Espacio entre la sección y otros elementos */
+color: #FEFAE0 ;  /* Color del texto */
+box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra para dar profundidad */
+}
+
+/* Título principal de la sección */
+.descripcion h2 {
+    font-size: 2.5rem; /* Tamaño de letra */
+    color: #FAEDCD; /* Naranja cálido surfero */
+    margin-bottom: 20px; /* Espacio entre el título y el texto */
+    font-family: 'Playfair Display', serif; /* Fuente de letra */
+    text-transform: uppercase; /* Mayúsculas */
+    letter-spacing: 3px; /* Espacio entre letras */
+}
+
+/* Texto general */
+.descripcion p {
+    font-size: 1.2em; /* Tamaño de letra */
+    color: #FEFAE0; /* Gris claro */
+    line-height: 1.8; /* Espacio entre líneas */
+    margin-bottom: 20px; /* Espacio entre el texto y el siguiente elemento */
+}
+
+/* Subtítulos */
+.descripcion h3 {
+    font-size: 1.8rem; /* Tamaño de letra */
+    color: #CCD5AE; /* Color titulo parrafos */
+    margin-top: 30px; /* Espacio entre el título y el texto */
+}
+
+/* Bloques de contenido */
+.historia, .ambiente, .eventos {
+    padding: 20px; /* Espacio entre el contenido y los bordes */
+    background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 20px auto; /* Espacio entre el bloque y otros elementos */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+/* Última sección sin margen extra abajo */
+.eventos {
+    margin-bottom: 0; /* Elimina el espacio extra abajo */
+}
+
+/* Barra de navegación */
+nav {
+    background-color: rgba(68, 68, 68, 0.8); /* Fondo semi-transparente */
+    width: 100%; /* Ocupar todo el ancho */
+    padding: 10px 0; /* Espaciado interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    z-index: 1; /* Posicionar encima del overlay */
+}
+
+/* Lista de navegación */
+nav ul {
+    list-style: none; /* Eliminar viñetas */
+    padding: 0; /* Eliminar padding */
+    margin: 0; /* Eliminar márgenes */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar elementos */
+}
+
+/* Elementos de la lista de navegación */
+nav ul li {
+    margin: 0 15px; /* Espaciado entre elementos */
+}
+
+/* Enlaces de la navegación */
+nav ul li a {
+    color: #FEFAE0; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover en enlaces de navegación */
+nav ul li a:hover {
+    background-color: rgba(85, 85, 85, 0.8); /* Cambiar color de fondo al pasar el ratón */
+}
+
+/* Pie de página */
+footer {
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente */
+    color: #FEFAE0; /* Color del texto */
+    text-align: center; /* Centrar contenido */
+    padding: 20px; /* Espaciado interno */
+    width: 100%; /* Ocupar todo el ancho */
+    margin-top: auto; /* Espaciado superior */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Lista de enlaces en el pie de página */
+footer ul {
+    list-style: none; /* Eliminar viñetas */
+    padding: 0; /* Eliminar padding */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar elementos */
+    gap: 20px; /* Espaciado entre elementos */
+}
+
+/* Enlaces en el pie de página */
+footer a {
+    color: #FEFAE0; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    transition: opacity 0.3s ease; /* Efecto de transición */
+}
+
+/* Efecto hover en los enlaces del pie de página */
+footer a:hover {
+    opacity: 0.8; /* Reducir opacidad */
+}
+
+/* Enlace para volver arriba */
+.back-to-top {
+    display: inline-block; /* Mostrar como bloque */
+    margin-top: 10px; /* Espaciado superior */
+    font-weight: bold; /* Negrita */
+    color: #FEFAE0; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    transition: opacity 0.3s ease; /* Efecto de transición */
+}
+
+.back-to-top:hover { /* Corregí el espacio innecesario */
+    opacity: 0.8; /* Reducir opacidad */
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%; /* Ancho de la tabla al 100% */
+    border-collapse: collapse; /* Colapsar bordes de la tabla */
+    margin-bottom: 20px; /* Margen inferior de la tabla */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    color: #D4A373; /* Color del texto */
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Bordes de la tabla */
+}
+
+th, td {
+    padding: 10px; /* Relleno de las celdas de la tabla */
+    text-align: left; /* Alineación del texto a la izquierda en las celdas */
+}
+
+th {
+    background-color: #FAEDCD; /* Color de fondo de los encabezados de la tabla */
+}
+
+/* Formulario */
+form {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario */
+}
+
+form label {
+    display: block; /* Hace que cada etiqueta ocupe todo el ancho disponible */
+    margin-bottom: 5px; /* Margen inferior de la etiqueta */
+}
+
+form input {
+    width: 100%; /* Ancho del campo de entrada al 100% */
+    margin-bottom: 10px; /* Margen inferior para separar los campos de entrada */
+    border: 1px solid #ccc; /* Bordes del campo de entrada */
+    border-radius: 4px; /* Bordes redondeados del campo de entrada */
+}
+
+form button {
+    background-color: #333; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px; /* Relleno interno del botón */
+    border: none; /* Sin borde en el botón */
+    border-radius: 4px; /* Bordes redondeados del botón */
+    cursor: pointer; /* Cambiar el cursor a una mano al pasar por el botón */
+}
+
+form button:hover {
+    background-color: #555; /* Color de fondo del botón al pasar el ratón */
+}
+
+/* Ocultar la seccion de confirmacion por defecto*/
+#confirmacion {
+    display: none; /* Ocultar la sección de confirmación por defecto */
+    margin-top: 20px; /* Margen superior para separar la sección de confirmación del resto del contenido */
+    padding: 15px; /* Relleno interno de la sección de confirmación */
+    background-color: #4caf4c; /* Color de fondo de la sección de confirmación */
+    color: white; /* Color del texto de la sección de confirmación */
+    border-radius: 5px; /* Bordes redondeados de la sección de confirmación */
+    text-align: center; /* Alineación del texto en el centro de la sección de confirmación */
+    font-size: 1.1rem; /* Tamaño del texto en la sección de confirmación */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);  /* Sombra suave */
+}
+/* Mostrar la confirmación solo si se recarga con la URL correcta */
+:target#confirmacion {
+    display: block;
+}
+
+/* Ocultar el formulario cuando la confirmación se muestra */
+:target#confirmacion + #reserva {
+    display: none; 
+}

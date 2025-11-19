@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es"> <!--definimos el idioma del documento en este caso, español-->
+<head>
+    <meta charset="UTF-8"> <!--definimos el conjunto de caracteres que se utilizarán-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--definimos la ventana de visualización-->
+    <title>Reserva - Restaurante Las Maldivas</title> <!--definimos el título del documento-->
+    <link rel="stylesheet" href="estilos.css"><!--enlaza el archivo de estilos-->
+</head>
+
+<body>
+    <header>
+        <h1>Reserva en Restautante Las Maldivas</h1> <!--definimos el título de la página-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li> <!--enlace a la pagina principal--->
+                <li><a href="menu.html">Menú</a></li> <!--enlace a la pagina del menu-->
+                <li><a href="reserva.html">Reserva</a></li> <!--Enlace a la pagina de reserva-->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="reserva">
+        <h2>Reserva tu mesa</h2> <!--definimos el subtitulo para la reserva-->
+        <form action="#confirmacion" method="get"> <!--definimos el formulario-->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required> <!--Campo para el nombre-->
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required> <!--Campo para el email-->
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required> <!--Campo para la fecha -->
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required> <!--Campo para la hora-->
+
+            <label for="personas">Número de personas:</label>
+            <input type="number" id="personas" name="personas" min="1" required> <!--campo para el número de personas-->
+
+            <button type="submit">Reservar</button> <!--botón para enviar el formulario-->
+        </form>
+    </section> 
+
+        <!--Sección de confirmacion-->
+        <section id="confirmacion">
+            <p>¡Reserva realizada con exito! Te esperamos.</p>
+            <a href="#reserva">Volver al formulario</a>
+        </section>
+
+    <footer>
+        <p>Síguenos en nuestras redes sociales: </p>
+        <ul>
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li> <!--enlace a la pagina de facebook-->
+            <li><a href="https:TikTok.com" target="_blank">TikTok</a></li> <!--enlace a la pagina de tiktok-->
+            <li><a href="https:Instagram.com" target="_blank">Instagram</a></li> <!--enlace a la pagina de instagram-->
+        </ul>
+        <a href="#top">Volver arriba</a> <!--enlace para volver arriba-->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es"> <!--definimos el idioma del documento en este caso, español-->
+<head>
+    <meta charset="UTF-8"> <!--establece la codificacion de caracteres a UTF-8-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!--Configurar la vista para poder usarlo en dispositivos móviles -->
+    <title>Restaurante Las Maldivas</title> <!--titulo de la pagina, que aparecera en la pestaña del navegador-->
+    <link rel="stylesheet" href="estilos.css"> <!--enlace al archivo CSS para estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Restaurante Las Maldivas</h1> <!--titulo principal del restaurante-->
+        <p>Bienvenidos a Restaurante Las Maldivas,disfruta el sabor del paraiso en cada bocado. </p> <!--mensaje de bienvenida-->
+        
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li> <!--Enlace a la pagina principal-->
+            <li><a href="menu.html">Menú</a></li> <!--Enlace a la pagina de menú-->
+            <li><a href="reserva.html">Reserva</a></li> <!--Enlace a la pagina de reservas-->
+        </ul>
+    </nav>
+    
+
+         <!-- Carrusel de imágenes -->
+<div class="carousel">
+         <!-- Radios que actúan como controles para cada imagen -->
+         <input type="radio" name="carousel" id="slide1" checked> <!-- Imagen 1 -->
+         <input type="radio" name="carousel" id="slide2"> <!-- Imagen 2 -->
+         <input type="radio" name="carousel" id="slide3"> <!-- Imagen 3 -->
+         <input type="radio" name="carousel" id="slide4"> <!-- Imagen 4 -->
+         <input type="radio" name="carousel" id="slide5"> <!-- Imagen 5 -->
+         <input type="radio" name="carousel" id="slide6"> <!-- Imagen 6 -->
+
+        <!--Contenedor de las imagenes del carrusel-->
+        <div class="carousel-images">
+        <!-- Cada imagen dentro de un contenedor .carousel-item -->
+        <div class="carousel-item">
+            <img src="imagenes/Restaurante.jpg" alt="Restaurante Las Maldivas">
+        </div>
+
+        <div class="carousel-item">
+            <img src="imagenes/carrusel1.jpg" alt="Imagen 1">
+        </div>
+           
+        <div class="carousel-item">
+            <img src="imagenes/carrusel3.jpg" alt="Imagen 3" >
+        </div>
+
+        <div class="carousel-item">
+            <img src="imagenes/carrusel4.jpg" alt="Imagen 4" >
+        </div> 
+
+        <div class="carousel-item">   
+        <img src="imagenes/carrusel5.jpg" alt="Imagen 4" >
+         </div>
+
+         <div class="carousel-item"> 
+            <img src="imagenes/carrusel6.jpg" alt="Imagen 4">
+        </div>
+    </div>
+    <!-- Botones de control (labels que sirven para cambiar las imágenes) -->
+    <div class="carousel-controls">
+        <label for="slide1" class="control-btn"></label>
+        <label for="slide2" class="control-btn"></label>
+        <label for="slide3" class="control-btn"></label>
+        <label for="slide4" class="control-btn"></label>
+        <label for="slide5" class="control-btn"></label>
+        <label for="slide6" class="control-btn"></label>
+    </div>
+</div>
+
+<!--Descripción del restautante-->
+<main>
+<section class="descripcion">
+    <h2>Siente el espiritú del surf en cada bocado</h2>
+    <p> Desde 1999, Las Maldivas es el punto de encuentro perfecto para los amantes de la playa, la gastronómia Española y el buen rollo. </p>
+    <div class="historia">
+        <h3>Nuestra Historia</h3>
+        <p>Inspirado en la energía tropical y la cultura surfer, Las Maldivas nació con la idea de satisfacer las necesidades de los amantes de la playa y la buena comida.  Un lugar donde el mar, la música y la gastronomía se unen en perfecta armonía</p>
+    </div>
+
+    <div class="ambiente">
+        <h3>Un rincón de playa en cada detalle</h3>
+        <p> Desde la madera rústica hasta las luces cálidas y las tablas de surf en las paredes, cada rincón de Las Maldivas te hará sentir en la playa. </p>
+    </div>
+
+    <div class="eventos">
+        <h3>Eventos y Comunidad</h3>
+        <p>Música en vivo,noches temáticas y retransmisiones de campeonatos de surf. ¡Únete a nuestra tribu! </p>
+    </div>
+</section>
+
+
+
+    <footer>
+        <p>¡Síguenos en nuestras redes sociales!:</p> <!--mensaje de red social-->
+        <ul>
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li> <!--enlace a la pagina de facebook-->
+            <li><a href="https://tiktok.com" target="_blank">Tik Tok</a></li> <!--enlace a la pagina de tik tok-->
+            <li><a href="https://instagram.com" target="_blank">Instagram</a></li> <!--enlace a la pagina de instagram-->    
+        </ul>
+        <a href="#top">Volver arriba</a> <!--enlace para volver arriba-->
+    </footer>
+</body>    
+</html>
