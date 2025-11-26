@@ -12,6 +12,11 @@ body{
     color: #333;
     background-color: #eaf6ff;
 }
+.contenedor-general{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
 /* cabecera y navegacion*/
 .banner{
@@ -74,7 +79,7 @@ body{
     padding:0; 
 }
 /*Botones transparentes y texto blanco */
-.listado button {
+.listado  a {
     background:none;
     color:#fff;
     border:none;
@@ -86,7 +91,7 @@ body{
    
 }
 /*Efecto hover en los botones de navegacion*/
-.listado button:hover {
+.listado a:hover {
     color:#fca311;
 }
 
@@ -154,7 +159,7 @@ p{
 .cultura{
     background-color: #eaf6ff;
 }
-/*tarjetas en grid de 4 columnas, cada tarjeta tiene borde, sombra y efecto hover*/
+/*tarjetas en grid  4 columnas, cada tarjeta tiene borde, sombra y efecto hover*/
 .cards{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -187,7 +192,6 @@ p{
     border-radius: 5px;
     margin: 15px 0 5px 0;
     width: 100%;
-    /* se adapta al contenedor sin distorsionarse */
     object-fit: cover;
 }
 .card .pie-foto{
@@ -222,7 +226,7 @@ p{
 
 
 
-/* Información práctica con flex, bloque con borde y fondo blanco*/
+/* Información  con flex, borde y fondo blanco*/
 .info{
     display: flex;
     flex-wrap: wrap;
@@ -256,7 +260,8 @@ p{
     max-width: 300px; /* limitar el tamaño del mapa */
 }
 
-/*formulario de contacto centrado y con boton azul a naranja al pasar el cursor*/
+/*Contacto*/
+
 .contacto form {
     display: flex;
     flex-direction: column;
@@ -284,122 +289,27 @@ p{
 }
 
 /*footer*/
-.footer{
-    
-    background-color: #222;
-    color:#fff;
-    padding: 20px 0;
-    margin-top: 50px;
-    font-size: 0.9em;
-    font-weight: 300;
+footer{
+    background-color: #222; 
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
 }
-.footer p {
-  text-align: center;
-  margin: 0;
+.footer-contenido{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.redes{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    margin-top: 10px;
+}
+.copyright{
+    text-align: center;
+    margin-top: 20px;
 }
 
 
 /*media queries */
-
-/* Dispositivos Móviles (hasta 767px) */
-@media (max-width: 767px) {   
-    .banner {
-        /* Reducir el tamaño de fuente*/
-        font-size: 0.8em; 
-        height: 70vh;
-    }
-    .banner h1 {
-        font-size: 2.2em;
-    }
-    .banner h2 {
-        font-size: 1.2em;
-    }
-    /* Navegación: Cambiar a lista vertical */
-    .listado {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-    .listado button {
-       display: block;
-       width: 100%;
-       max-width: 250px;
-       text-align: center;
-       padding: 10px;
-       background-color: rgba(255, 255, 255, 0.1);
-       border-radius: 5px;
-       color: #fff;
-       font-weight: 600;
-       text-transform: uppercase;
-       transition: color 0.3s;
-       border: none;
-    }
-    section h2 {
-        font-size: 2em;
-    }
-    
-    /* Una sola columna */
-    .cards {
-        grid-template-columns: 1fr; 
-        gap: 20px;
-    }
-    
-    .info article, .info img {
-        flex: 1 1 100%; 
-    }
-}
-
-/* Tablets (entre 768px y 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    
-    .banner {
-        min-height: 70vh; 
-    }
-    
-    /* 2 columnas */
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    /* 2 elementos por línea */
-    .info article {
-        flex: 1 1 calc(50% - 15px); 
-    }
-    .info img {
-        flex: 1 1 100%;
-    }
-
-    /* Títulos ajustados */
-    .banner h1 {
-        font-size: 3em;
-    }
-}
-/* Escritorios grandes (desde 1200px en adelante) */
-@media (min-width: 1200px) {
-  
-  .banner h1 {
-    font-size: 4rem; /* título más grande */
-  }
-
-  .banner h2 {
-    font-size: 2rem;
-  }
-
-  .cards {
-    grid-template-columns: repeat(4, 1fr); /* asegurar las 4 columnas */
-    gap: 40px; /* más espacio entre tarjetas */
-  }
-
-  .cartel {
-    max-width: 300px; /* carteles más grandes */
-  }
-
-  .info article {
-    flex: 1 1 300px; /* bloques más amplios */
-  }
-
-  section {
-    max-width: 1400px; /* ampliar el ancho máximo de las secciones */
-  }
-}
