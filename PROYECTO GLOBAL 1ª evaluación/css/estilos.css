@@ -13,9 +13,9 @@ body{
     background-color: #eaf6ff;
 }
 .contenedor-general{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column; /* secciones apiladas */
+  align-items: stretch;   /* que cada sección ocupe su ancho */
 }
 
 /* cabecera y navegacion*/
@@ -116,44 +116,53 @@ p{
     text-align: justify;
 }
 .pie-foto{
-    text-align: center;
-    font-style: italic;
-    color: #666;
-    font-size: 0.9em;
-    margin:5px auto 30px auto;
-    max-width: 500px;
+font-style: italic;
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 10px;
 }
 
 /* Historia y origen */
-.historia{
-    background-color: #eaf6ff;
-    padding: 50px 10%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.historia h2{
-    text-align: center;
-    font-size: 2.5em;
-    color: #0077b6;
-    margin-bottom: 40px;
-    border-bottom: 3px solid #0077b6;  
+.historia {
+  background-color: #eaf6ff;
+  padding: 50px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.historia p{
-   margin-bottom: 20px;
-    font-size: 1.1em;
-    line-height: 1.8;
-    text-align: justify;
+.historia h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #0077b6;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #0077b6;
 }
-/*imagenes historia centradas, con sombra y redondeados*/
-.imagen-historia{
-    max-width: 100%;
+
+.bloque-historia-izquierda,
+.bloque-historia-derecha {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+.bloque-historia-izquierda img,
+.bloque-historia-derecha img {
+    flex: 0 0 40%;
+    max-width: 40%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: block;   
-    margin: 30px auto 10px auto;
-    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.bloque-historia-izquierda div,
+.bloque-historia-derecha div {
+    flex: 0 0 50%;
+    width: 50%;
+    box-sizing: border-box;
+}
+.bloque-historia-derecha {
+    flex-direction: row-reverse; 
 }
 /*cultura y tradiciones*/
 .cultura{
@@ -227,67 +236,103 @@ p{
 
 
 /* Información  con flex, borde y fondo blanco*/
-.info{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    margin-top: 20px;
-
+.informacion-contacto{
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.info article{
-    flex: 1 1 250px;
-    padding: 20px;
-    border:2px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-    text-align: left;
-
+.informacion-contacto h2{
+   text-align: center;
+    font-size: 2.5em;
+    color: #0077b6;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #0077b6;
 }
-.info article h4{
+.informacion-contacto h4{
     color: #0077b6;
     margin-bottom: 10px;
 
 }
-.info img{
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px auto 0 auto;
-    display: block;
-    max-width: 300px; /* limitar el tamaño del mapa */
+.info{
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px; /* Separación con el bloque de abajo */
 }
 
-/*Contacto*/
+.info article {
+    flex: 1 1 250px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
 
-.contacto form {
+.info article h4 {
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+.contenedor-mapa-form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: stretch;
+}
+.mapa{
+    flex: 1 1 45%;
+    min-width: 300px;
+    min-height: 450px; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    position: relative; 
+}
+.mapa iframe{
+   width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;     
+}
+.formulario-contacto{
+    flex: 1 1 45%; 
+    min-width: 300px;
+    background-color:#eaf6ff ;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.formulario-contacto h3{
+   margin-bottom: 20px;
+   color: #0077b6;
+}
+.formulario-contacto form{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
 }
-.contacto input, .contacto textarea {
+.formulario-contacto input,
+.formulario-contacto textarea {
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 1em;
 }
-.contacto button {
+.formulario-contacto button {
     background-color: #0077b6;
-    color: #fff;
+    color: white;
     border: none;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1em;
 }
-.contacto button:hover {
-    background-color: #fca311;
+.formulario-contacto button:hover {
+    background-color:#fca311;
 }
-
 /*footer*/
 footer{
     background-color: #222; 
@@ -313,3 +358,84 @@ footer{
 
 
 /*media queries */
+
+/*tablets y pantallas medianas (hasta 1024px)*/
+@media (max-width: 1024px){
+    .banner h1{
+        font-size: 2.8rem;
+    }
+    .listado{
+        gap:15px;
+    }
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+        gap:20px;
+    }
+    .historia{
+        padding:40px 20px;
+    }
+}
+
+/*moviles y pantallas pequeñas (hasta 768px)*/
+@media (max-width: 768px){
+    .banner h1{
+        font-size: 2rem;
+    }
+   
+    .listado{
+        flex-direction: column;
+        text-align: center;
+        gap:10px;
+        padding: 10px;
+    }
+    .listado li{
+        width: 100%;
+        border-bottom: 1px solid #444;
+    }
+    .bloque-historia-derecha,
+    .bloque-historia-izquierda{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .bloque-historia-derecha img,
+    .bloque-historia-izquierda img,
+    .bloque-historia-derecha div,
+    .bloque-historia-izquierda div{
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    .carteles-anteriores {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cartel{
+        max-width: 80%;
+    }
+    .info{
+        flex-direction: column;
+    }
+    .contenedor-mapa-form{
+        flex-direction: column;
+    }
+    .mapa,
+    .formulario-contacto{
+        flex: 0 0 100%;
+        width: 100%;
+        min-width: auto;     
+    }
+    .mapa{
+        min-height: 300px;
+    }
+    .footer-contenido{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+
