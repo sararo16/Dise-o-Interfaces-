@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.panel-control {
+    display: flex;
+    justify-content: space-around; /* Distribuye las tarjetas con espacio alrededor */
+    align-items: center; /* Centra las tarjetas verticalmente */
+    width: 80%; /* El panel ocupa el 80% del ancho de la pantalla */
+    height: 200px; /* Le damos una altura fija para practicar la alineación vertical */
+    margin: 50px auto; /* Centra el panel horizontalmente */
+    border: 3px solid #ccc; /* Borde visible para ver los límites */
+}
+
+.tarjeta {
+    flex-grow: 1; /* Cada tarjeta puede crecer para llenar el espacio disponible */
+    flex-basis: 0; /* Las tarjetas empiezan con un tamaño base de 0 */
+    margin: 0 10px; /* **Importante:** Cada tarjeta debe tener un margen de 10px entre sí */
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* **Importante:** Cada tarjeta debe tener un margen de 10px entre sí */
+}

@@ -1,11 +1,14 @@
+
+
+/*  RESET Y BASE */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* hace que el pading no engorde las cajas. */
 }
 
 h1,
 h4,
 p {
-  margin: 0;
+  margin: 0; /* elimina márgenes por defecto para controlar nosotrs el espacio*/
 }
 
 body {
@@ -16,17 +19,18 @@ body {
   color: #333;
 }
 
+/* CONTENEDOR PRINCIPAL (la caja que envuelve todo) */
 .container {
   background-color: white;
   color: #333;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1200px; /* ancho máximo para pantallas grandes */
+  margin: auto;  /* centra la caja horizontalmente en la pantalla */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Cabecera */
+/* Cabecera sin flexbox maquetacion simple */
 header {
   text-align: center;
   margin-bottom: 20px;
@@ -44,18 +48,21 @@ header h4 {
   margin-top: 5px;
 }
 
-/* Primera fila: menú lateral, main y artículo */
+/*zona central 3 columnas, esta clase envuelve al Nav(izq), main (centro), article (der) */
 .content_wrapper {
-  display: flex;
-  gap: 20px;
+
+  display: flex; /* activamos flex para poner las 3 cajas en horizontal */
+  gap: 20px; /* pone espacio entre las columnas sin tener que usar margin.lef o right  */
   margin-bottom: 20px;
 }
 
-/* Menú lateral */
+/* Menú lateral izq*/
 nav {
+  /* flex: 1 significa "Ocupa 1 parte del espacio disponible" */
   flex: 1;
+  /* dentro del menu para ordenar los botones */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* pone los botones uno debajo del otro vertical */
   background-color: #f8f8f8;
   padding: 10px;
   border-radius: 10px;
@@ -74,8 +81,10 @@ nav div:hover {
   background-color: #eaeaea;
 }
 
-/* Contenido principal */
+/* Contenido principal centro*/
 main {
+  /* Si el menú tiene flex: 1 y esto tiene flex: 2...
+  ¡Significa que el Main será EL DOBLE de ancho que el menú! */
   flex: 2;
   background-color: #fff;
   padding: 10px;
@@ -84,13 +93,14 @@ main {
 }
 
 main img {
-  width: 100%;
+  width: 100%;/* La imagen se adapta al ancho de su caja padre */
   height: auto;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
 /* Artículo lateral derecho */
+/* Selector avanzado: Elige el primer <article> que esté dentro de content_wrapper */
 .content_wrapper article:nth-of-type(1) {
   flex: 1;
   background-color: #fff;
@@ -100,15 +110,23 @@ main img {
   text-align: center;
 }
 
-/* Artículos inferiores */
+/* Artículos inferiores (3 tarjetas iguales)*/
 .articles {
+  /* activamos flex para poner las 3 tarjetas en horizontal */
   display: flex;
+
+  /* Las separa dejando el hueco en medio (aunque aquí flex-grow mandará más) */
   justify-content: space-between;
-  gap: 20px;
+  gap: 20px;   /* espacio entre tarjetas */
   margin-bottom: 20px;
 }
 
+/* Estilos para CADA tarjeta de abajo */
 article {
+
+  /* [EXAMEN] IGUALDAD */
+  /* Al poner flex: 1 a TODOS los artículos por igual, 
+  Flexbox obliga a que los tres midan EXACTAMENTE lo mismo. */
   flex: 1;
   background-color: #fff;
   padding: 10px;
@@ -118,7 +136,7 @@ article {
 }
 
 article img {
-  width: 100%;
+  width: 100%; /* Responsive: la imagen nunca se sale de la tarjeta */
   height: auto;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -133,7 +151,15 @@ article h2 {
 /* Pie de página */
 footer {
   display: flex;
+
+  /* [EXAMEN] DISTRIBUCIÓN */
+  /* space-between manda:
+     - La dirección (address) a la izquierda del todo.
+     - El copyright al centro (mas o menos).
+     - Los iconos sociales a la derecha del todo. */
   justify-content: space-between;
+
+  /* Centrado vertical perfecto de texto e iconos */
   align-items: center;
   background-color: #f8f8f8;
   padding: 20px;

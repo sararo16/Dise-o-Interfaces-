@@ -3,7 +3,7 @@
 *{
     margin:0;
     padding:0;
-    box-sizing: border-box; /*incluye el padding y borde en el tamaño total del elemento*/
+    box-sizing: border-box; 
 }
 
 body{
@@ -12,35 +12,39 @@ body{
     color: #333;
     background-color: #eaf6ff;
 }
+
 .contenedor-general{
   display: flex;
-  flex-direction: column; /* secciones apiladas */
-  align-items: stretch;   /* que cada sección ocupe su ancho */
+  flex-direction: column; /* organizar secciones una debajo de la otra */
+  align-items: stretch;   /* que cada sección ocupe todo el ancho */
 }
 
 /* cabecera y navegacion*/
 .banner{
   height: 100dvh;
   width: 100%;
+  /* centramos el titulo en medio de la foto */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: center; /*centrar verticalmente*/
+  justify-content: center; /*centrar horizontalmente*/
+  text-align: center; 
   color: #fff;
   /*imagen de fondo con degradado*/
   background: 
   linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
   url("../imagenes/hoguera.jpg");
-  background-size: cover;
+  background-size: cover; /* cubrir todo el fondo sin deformarse */
   background-position: center center;
   background-repeat: no-repeat;
   /*Hacer que la imagen de fondo permanezca fija al hacer scroll*/
   background-attachment: fixed;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  overflow: hidden; /* evitar barras de desplazamiento */
+  overflow: hidden; /* evitar que salga scroll si el contenido se desborda */
 }
-/*Organizacion del contenido del banner con Grid y borde blanco */
+
+/*caja de titulo */
 .banner-contenido{
+    /* separamos titulo y subtitulo con gap */
     display:grid;
     gap:0.5rem;
     padding:1rem 1.5rem;
@@ -66,23 +70,26 @@ body{
     /*barra navegacion fija*/
     position:sticky;
     top:0;
-    z-index:100;
+    z-index:100; /* aseguramos que la navegacion esté por encima de otros elementos */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 /*menu horizontal con flex*/
 .listado {
+    /* flex para los elementos li en horizontal */
     display:flex;
-    justify-content: center;
-    list-style: none;
-    gap:30px;
+    justify-content: center; /*centrar horizontal*/
+    list-style: none; /* eliminar puntos */
+    gap:30px; /* espacio entre botones */
     margin:0;
     padding:0; 
 }
+
 /*Botones transparentes y texto blanco */
 .listado  a {
     background:none;
     color:#fff;
-    border:none;
+    border:none; /* sin borde */
     padding:0.5rem 0;
     cursor: pointer;
     font-weight: 600;
@@ -97,7 +104,7 @@ body{
 
 /* estilos generales de secciones */
 section{
-    padding: 50px 20px;
+    padding: 50px 20px; /* espacio interno */
     max-width: 1200px;
     margin: 0 auto;
 
@@ -126,7 +133,7 @@ font-style: italic;
 .historia {
   background-color: #eaf6ff;
   padding: 50px 20px;
-  max-width: 1400px;
+  max-width: 1400px; /* Esta sección es un poco más ancha */ 
   margin: 0 auto;
 }
 
@@ -138,41 +145,49 @@ font-style: italic;
   border-bottom: 3px solid #0077b6;
 }
 
+/* Contenedores Flex para Texto + Imagen en horizontal*/
 .bloque-historia-izquierda,
 .bloque-historia-derecha {
     display: flex; 
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* para que los elkementos bajen de línea si no caben */
     gap: 30px;
     margin-bottom: 40px;
-    align-items: center;
+    align-items: center;  
     justify-content: space-between;
 }
 .bloque-historia-izquierda img,
 .bloque-historia-derecha img {
+    /* imagen ocupa siempre el 40% del ancho del contenedor */
     flex: 0 0 40%;
     max-width: 40%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+/* contenedor del texto */
 .bloque-historia-izquierda div,
 .bloque-historia-derecha div {
+    /* el texto ocupa siempre el 50% del contenedor  */
     flex: 0 0 50%;
     width: 50%;
     box-sizing: border-box;
 }
+/* invertir el orden de los elementos */
 .bloque-historia-derecha {
     flex-direction: row-reverse; 
 }
+
+
 /*cultura y tradiciones*/
 .cultura{
     background-color: #eaf6ff;
 }
-/*tarjetas en grid  4 columnas, cada tarjeta tiene borde, sombra y efecto hover*/
+
 .cards{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 30px;
+    grid-template-columns: repeat(4,1fr); /*4 columnas iguales */
+    gap: 30px; /* espacio entre tarjetas */
     margin-top:20px;
 }
 .card{
@@ -181,8 +196,9 @@ font-style: italic;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     background-color: #fff;
-    transition: transform 0.3s;
+    transition: transform 0.3s; /* animar hover */
 }
+
 /*Efecto hover en las tarjetas*/
 .card:hover{
     transform: translateY(-5px);
@@ -192,7 +208,7 @@ font-style: italic;
     color: #0077b6;
     margin-bottom: 15px;
     font-size: 1.4em;
-    border-left: 5px solid #fca311;
+    border-left: 5px solid #fca311; /* línea decorativa a la izquierda */
     padding-left: 10px;
 }
 .card img{
@@ -201,10 +217,10 @@ font-style: italic;
     border-radius: 5px;
     margin: 15px 0 5px 0;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Recorta la imagen para que llene el hueco sin deformarse */
 }
 .card .pie-foto{
-    margin: 5px 0 0 0;
+    margin: 5px 0 0 0; /* espacio arriba solo */
 }
 
 /* Experiencia */
@@ -213,9 +229,8 @@ font-style: italic;
     text-align: justify;
 }
 
-/* galeria de carteles con flex, centrados y efecto hover*/
 .carteles-anteriores {
-  display: flex;
+  display: flex; /* Flex carteles uno al lado de otro */
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
@@ -230,12 +245,12 @@ font-style: italic;
 }
 
 .cartel:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* efecto zoom al pasar el ratón */
 }
 
 
 
-/* Información  con flex, borde y fondo blanco*/
+/* Información y contacto */
 .informacion-contacto{
     padding: 50px 20px;
     max-width: 1200px;
@@ -253,6 +268,7 @@ font-style: italic;
     margin-bottom: 10px;
 
 }
+/* Cajas de Info  */
 .info{
    display: flex;
     flex-wrap: wrap;
@@ -262,43 +278,44 @@ font-style: italic;
 }
 
 .info article {
-    flex: 1 1 250px;
+    flex: 1 1 250px; /* crecen y encogen, ancho base 250px */
     padding: 20px;
     border: 2px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
     text-align: center;
 }
-
 .info article h4 {
     color: #0077b6;
     margin-bottom: 10px;
 }
+
+/* SECCIÓN MAPA Y FORMULARIO horizontal */
 .contenedor-mapa-form{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    align-items: stretch;
+    align-items: stretch; /* mapa y form misma altura */
 }
 .mapa{
-    flex: 1 1 45%;
+    flex: 1 1 45%; /* mapa mitad ancho */
     min-width: 300px;
     min-height: 450px; 
     border-radius: 12px; 
     overflow: hidden; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-    position: relative; 
+    position: relative; /* Necesario para que el iframe absoluto se posicione respecto a esta caja */
 }
 .mapa iframe{
    width: 100%;
     height: 100%;
-    position: absolute;
+    position: absolute; /* Ocupa todo el espacio de .mapa */
     top: 0;
     left: 0;
     object-fit: cover;     
 }
 .formulario-contacto{
-    flex: 1 1 45%; 
+    flex: 1 1 45%;  /* Ocupa la otra mitad (45%) */ 
     min-width: 300px;
     background-color:#eaf6ff ;
     padding: 30px;
@@ -311,7 +328,7 @@ font-style: italic;
 }
 .formulario-contacto form{
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  /* Inputs uno debajo de otro */
     gap: 15px;
 }
 .formulario-contacto input,
@@ -342,7 +359,7 @@ footer{
 }
 .footer-contenido{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Reparte el espacio sobrante alrededor de los elementos */
     flex-wrap: wrap;
 }
 .redes{
@@ -365,9 +382,10 @@ footer{
         font-size: 2.8rem;
     }
     .listado{
-        gap:15px;
+        gap:15px; /* Juntamos más los botones del menú */
     }
     .cards{
+        /* Pasamos de 4 columnas a 2 columnas para que se vean bien en tablet */
         grid-template-columns: repeat(2,1fr);
         gap:20px;
     }
@@ -382,6 +400,7 @@ footer{
         font-size: 2rem;
     }
    
+    /* Cambiamos el menú de fila a columna (vertical) */
     .listado{
         flex-direction: column;
         text-align: center;
@@ -392,6 +411,8 @@ footer{
         width: 100%;
         border-bottom: 1px solid #444;
     }
+
+    /* HISTORIA: Quitamos la fila y ponemos todo en columna */
     .bloque-historia-derecha,
     .bloque-historia-izquierda{
         flex-direction: column;
@@ -406,6 +427,7 @@ footer{
         max-width: 100%;
         width: 100%;
     }
+    /* Pasamos a 1 columna las tarjetas */
     .cards{
         grid-template-columns: 1fr;
     }
@@ -419,6 +441,7 @@ footer{
     .info{
         flex-direction: column;
     }
+    /*  Ponemos el mapa y el formulario en columna */
     .contenedor-mapa-form{
         flex-direction: column;
     }
