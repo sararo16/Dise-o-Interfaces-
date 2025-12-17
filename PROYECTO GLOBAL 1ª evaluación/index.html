@@ -21,8 +21,7 @@
             <li><a href="#historia">Historia y origen</a></li>
             <li><a href="#cultura">Cultura y tradición</a></li>
             <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#informacion">Información</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#informacion-contacto">Información y contacto</a></li>
             </ul>
         </nav>
 
@@ -31,33 +30,39 @@
         <!--Historia-->
         <section id ="historia" class="historia">
             <h2>Historia y origen</h2>
-
+            <div class="bloque-historia-izquierda">
+            <img src="imagenes/HOGUERA2.PNG" alt="hoguera san juan"  class="imagen-historia">
+            <div>
         <p>
         Las Fiestas Patronales de San Juan de la Arena se celebran cada 24 de junio en honor a 
         <strong>San Juan Bautista</strong>, patrón del pueblo. La tradición une la devoción religiosa con los 
         antiguos rituales del solsticio de verano, donde el fuego y el agua simbolizan purificación y renovación.
         </p>
-  
-    <img src="imagenes/HOGUERA2.PNG" alt="hoguera san juan"  class="imagen-historia">
-    <p class="pie-foto">Barco quemando siguiendo la tradición marinera</p>
-  
-  
-        <p>
-            El acto más emblemático es la <strong>procesión marinera</strong>, declarada Fiesta de Interés Turístico 
+            </div>
+        </div>
+      
+      <div class="bloque-historia-derecha">
+            <img src="imagenes/procesion2.jpg" alt="Procesión marinera" class="imagen-historia">
+        <div>
+            <p>
+             El acto más emblemático es la <strong>procesión marinera</strong>, declarada Fiesta de Interés Turístico 
             Regional, en la que la imagen del santo recorre las calles del pueblo hasta llegar al puerto. Allí, es embarcada 
             en una lancha engalanada que navega por la ría del Nalón, escoltada por otras embarcaciones.
-        </p>
-    <img src="imagenes/procesion2.jpg" alt="Procesión  marinera"  class="imagen-historia">
-    <p class="pie-foto">Procesión marinera por las calles del pueblo</p>
-        <p>
-        Con el tiempo se añadieron elementos populares como las <strong>verbenas nocturnas</strong>, los 
-        <strong>fuegos artificiales</strong> y la tradicional <strong>cucaña</strong>, junto a la gastronomía típica 
-        de sardinas a la brasa, sidra y bollos preñaos. Hoy la fiesta es un punto de encuentro que combina 
-        <strong>tradición religiosa</strong>, <strong>cultura marinera</strong> y <strong>diversión popular</strong>.
-        </p>
-        <img src="imagenes/verbena.jpg" alt="Verbenas nocturnas"  class="imagen-historia">
-        <p class="pie-foto">Orquesta en el prao de la fiesta</p>
-     </section>
+            </p>
+        </div>
+      </div>
+        <div class="bloque-historia-izquierda">
+            <img src="imagenes/verbena.jpg" alt="Verbenas nocturnas" class="imagen-historia">
+        <div>
+            <p>
+            Con el tiempo se añadieron elementos populares como las <strong>verbenas nocturnas</strong>, los 
+            <strong>fuegos artificiales</strong> y la tradicional <strong>cucaña</strong>, junto a la gastronomía típica 
+            de sardinas a la brasa, sidra y bollos preñaos. Hoy la fiesta es un punto de encuentro que combina 
+            <strong>tradición religiosa</strong>, <strong>cultura marinera</strong> y <strong>diversión popular</strong>.
+            </p>
+        </div>
+    </div>
+</section>
 
         <!--Cultura-->
     <section id="cultura" class="cultura">
@@ -123,9 +128,9 @@
   </div>  
     </section>
 
-    <!--Información-->
-    <section id="informacion" class="informacion">
-        <h2>Información</h2>
+    <!--Información y contacto -->
+    <section id="informacion-contacto" class="informacion-contacto">
+        <h2>Información y contacto </h2>
         <div class="info">
             <article>
                 <h4>Fechas</h4>
@@ -140,13 +145,18 @@
                 <p> Respeta zonas señalizadas y cuida el entorno natural.</p>
             </article>
         </div>
-    </section>
+        <div class="contenedor-mapa-form">
+            <div class="mapa">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11565.89007496174!2d-6.083383774421932!3d43.55503623770847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd36a1fe99f8b66b%3A0x29d709d516399f69!2sSan%20Juan%20de%20la%20Arena%2C%2033125%20Soto%20del%20Barco%2C%20Asturias!5e0!3m2!1ses!2ses!4v1763806430582!5m2!1ses!2ses"
-     width="50%" height="350" style="border:0; display: block; margin:0 auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-    <!--Contacto-->
-        <section id ="contacto" class="contacto">
-             <h2>Contacto</h2>
+            width="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    </div>
+    <div class="formulario-contacto">
+        <h3>¿Tienes alguna duda o sugerencia? <br>¡Queremos escucharte!</h3>        
                 <form>
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -159,7 +169,9 @@
 
                 <button type="submit">Enviar</button>
                 </form>
-        </section>
+            </div>
+        </div>
+    </section>
     </main>
     <footer>
     <div class="footer-contenido">
