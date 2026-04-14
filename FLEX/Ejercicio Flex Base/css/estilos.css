@@ -1,186 +1,89 @@
-
-
-/*  RESET Y BASE */
-* {
-  box-sizing: border-box; /* hace que el pading no engorde las cajas. */
+*{
+  box-sizing: border-box;
 }
 
-h1,
-h4,
-p {
-  margin: 0; /* elimina márgenes por defecto para controlar nosotrs el espacio*/
+.container{
+  color:#666;
+  font-family: "lobster", cursive;
+  margin: 20px auto;
+  width: 90%;
 }
 
-body {
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
+h1,h4,p{
+  margin: 0px;
 }
 
-/* CONTENEDOR PRINCIPAL (la caja que envuelve todo) */
-.container {
-  background-color: white;
-  color: #333;
-  max-width: 1200px; /* ancho máximo para pantallas grandes */
-  margin: auto;  /* centra la caja horizontalmente en la pantalla */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Cabecera sin flexbox maquetacion simple */
-header {
-  text-align: center;
-  margin-bottom: 20px;
-  font-family: 'Lobster', cursive;
-}
-
-header h1 {
-  font-size: 2em;
-  color: #333;
-}
-
-header h4 {
-  font-style: italic;
-  color: #666;
-  margin-top: 5px;
-}
-
-/*zona central 3 columnas, esta clase envuelve al Nav(izq), main (centro), article (der) */
-.content_wrapper {
-
-  display: flex; /* activamos flex para poner las 3 cajas en horizontal */
-  gap: 20px; /* pone espacio entre las columnas sin tener que usar margin.lef o right  */
-  margin-bottom: 20px;
-}
-
-/* Menú lateral izq*/
-nav {
-  /* flex: 1 significa "Ocupa 1 parte del espacio disponible" */
-  flex: 1;
-  /* dentro del menu para ordenar los botones */
-  display: flex;
-  flex-direction: column; /* pone los botones uno debajo del otro vertical */
-  background-color: #f8f8f8;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-}
-
-nav div {
-  padding: 10px;
-  color: #333;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-nav div:hover {
-  background-color: #eaeaea;
-}
-
-/* Contenido principal centro*/
-main {
-  /* Si el menú tiene flex: 1 y esto tiene flex: 2...
-  ¡Significa que el Main será EL DOBLE de ancho que el menú! */
-  flex: 2;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-}
-
-main img {
-  width: 100%;/* La imagen se adapta al ancho de su caja padre */
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-/* Artículo lateral derecho */
-/* Selector avanzado: Elige el primer <article> que esté dentro de content_wrapper */
-.content_wrapper article:nth-of-type(1) {
-  flex: 1;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
+header{
+  border-bottom:1px solid #666;
+  margin-bottom: 1em;
+  padding: 1em;
   text-align: center;
 }
 
-/* Artículos inferiores (3 tarjetas iguales)*/
-.articles {
-  /* activamos flex para poner las 3 tarjetas en horizontal */
+.content_wrapper{
   display: flex;
-
-  /* Las separa dejando el hueco en medio (aunque aquí flex-grow mandará más) */
-  justify-content: space-between;
-  gap: 20px;   /* espacio entre tarjetas */
-  margin-bottom: 20px;
-}
-
-/* Estilos para CADA tarjeta de abajo */
-article {
-
-  /* [EXAMEN] IGUALDAD */
-  /* Al poner flex: 1 a TODOS los artículos por igual, 
-  Flexbox obliga a que los tres midan EXACTAMENTE lo mismo. */
-  flex: 1;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  text-align: center;
-}
-
-article img {
-  width: 100%; /* Responsive: la imagen nunca se sale de la tarjeta */
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-article h2 {
-  font-size: 1em;
-  font-style: italic;
-  color: #444;
-}
-
-/* Pie de página */
-footer {
-  display: flex;
-
-  /* [EXAMEN] DISTRIBUCIÓN */
-  /* space-between manda:
-     - La dirección (address) a la izquierda del todo.
-     - El copyright al centro (mas o menos).
-     - Los iconos sociales a la derecha del todo. */
-  justify-content: space-between;
-
-  /* Centrado vertical perfecto de texto e iconos */
-  align-items: center;
-  background-color: #f8f8f8;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  color: #333;
   flex-wrap: wrap;
+  margin-bottom: 1em;
+  justify-content: space-between;
 }
 
-footer address {
-  font-style: normal;
+nav{
+  padding: 1em;
+  width: 10%;
+}
+nav div{
+  margin-bottom: 20px;
 }
 
-footer img {
-  width: 30px;
-  height: 30px;
-  margin-left: 10px;
-  cursor: pointer;
-  transition: transform 0.2s;
+main{
+  border:1px solid #666;
+  border-radius: 1em;
+  height: 400px;
+  padding: 1em;
+  text-align: center;
+  width: 54%;
 }
 
-footer img:hover {
-  transform: scale(1.1);
+main img{
+  border-radius: 1em;
+  height: 70%;
+  width: 80%;
+}
+
+.content_wrapper article:nth-of-type(1){
+  height: 400px;  
+}
+article{
+  border: 1px solid #666;
+  border-radius: 1em;
+  height: 300px;
+  padding: 1em;
+  text-align: center;
+  width: 32%;
+}
+
+article img{
+  border-radius: 1em;
+  height: 60%;
+  width: 100%;
+
+}
+.articles{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+}
+
+footer{
+  align-items: center;
+  border-top: 1px solid #666;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  padding: 2em;
+}
+
+footer img{
+  width: 50px;
+
 }

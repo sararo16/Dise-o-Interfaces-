@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box; /* El borde y padding no aumentan el tamaño total */
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%; /* Evita que las imágenes se salgan de su caja */
+    display: block;  /* Quita el espacio blanco extraño debajo de las imágenes */
+}
+.flex-container {
+    display: flex;
+    /* Por defecto es 'row', no hace falta ponerlo, pero saberlo ayuda */
+    
+    /* Eje Principal (Horizontal en PC) */
+
+    justify-content: space-between; 
+    /* Opciones clave: 
+       - center: Todo al medio.
+       - space-between: Extremos pegados a los bordes.
+       - space-evenly: Espacios matemáticamente idénticos entre todos.
+    */
+
+    /* Eje Secundario (Vertical en PC) */
+    align-items: center; 
+    /* Opciones clave:
+       - stretch: (Defecto) Estira los hijos para que midan igual de alto.
+       - baseline: Alinea por la línea del texto (útil si hay fuentes de distinto tamaño).
+    */
+
+    /* ¿Qué pasa si la pantalla se encoge un poco pero no salta la media query? */
+    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+}
+
+.item {
+    /* El comando mágico: flex: [crecer] [encoger] [base] */
+    flex: 1; /* Ocupa todo el espacio disponible equitativamente */
+    
+    /* O por separado: */
+    flex-grow: 1;   /* 1 = Si sobra espacio, dámelo a mí. 0 = No crezcas. */
+    flex-shrink: 0; /* 0 = Si falta espacio, NO me aplastes. */
+    align-self: flex-end; /* Este hijo específico se va abajo, ignorando al padre */
+}
