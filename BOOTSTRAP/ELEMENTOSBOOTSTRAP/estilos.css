@@ -1,0 +1,61 @@
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.seccion-articulo {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+.seccion-articulo h2 {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.seccion-sidebar {
+  background-color: #c0392b;
+  color: white;
+  padding: 40px;
+}
+.seccion-sidebar h2 {
+  color: white;
+  font-weight: bold;
+}
+
+.columnas-row {
+  margin-top: 0;
+}
+.columna {
+  padding: 20px;
+  border-top: 1px solid #dee2e6;
+}
+.columna h3 {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.columna-clara {
+  background-color: #f5f5f5;
+}
+.columna-oscura {
+  background-color: #dde3e8;
+}
+
+footer {
+  background-color: #1a8a7a;
+  color: white;
+  padding: 20px;
+}
+footer p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.fila-articulo-sidebar {
+  border-bottom: 2px solid #dee2e6;
+}

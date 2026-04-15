@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Container y container-fluid - Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .clase1 {
+            border: 1px solid LightSkyBlue;
+            background: LightSeaGreen;
+        }
+
+        .clase2 {
+            border: 1px solid LightSeaGreen;
+            background: LightSkyBlue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col mt-5 p-3 clase1">
+                <h1>Clase Container-fluid</h1>
+                <p>ancho total</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-md">
+        <div class="row">
+            <div class="col mt-5 p-3 clase2">
+                <h1>clase Container</h1>
+                <p>con márgenes</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <p>
+            Con "container-fluid" el contenedor ocupa todo el ancho de la página. Con "container" el contenedor tiene márgenes en ambos lados.
+        </p>
+    </div>
+
+</body>
+
+</html>
