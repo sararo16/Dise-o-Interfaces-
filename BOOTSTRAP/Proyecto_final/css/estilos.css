@@ -1,19 +1,24 @@
+/* :root significa que estas variables están disponibles para toda la página web */
 :root {
-  --arena: #c2ab7e;
-  --arena2: #ffd06d;
-  --azul: #93a8a6;
-  --fondo: #424656;
-  --gris: #807a73;
+  --arena: #c2ab7e;      
+  --arena2: #ffd06d;     
+  --azul: #93a8a6;       
+  --fondo: #424656;      
+  --gris: #807a73;       
 }
 
-/*Backgrounds*/
+/* FONDOS (Backgrounds)                                                       */
 body {
   background-color: var(--azul);
 }
+.bg-azul {
+  background-color: var(--azul) !important;
+}
 .bg-fondo {
-  background-color: var(--fondo) !important;
+  background-color: var(--fondo) !important; 
 }
 
+/* ESTILOS DE LOS TEXTOS DEL TÍTULO                                           */
 .hero_up {
   color: var(--arena);
 }
@@ -30,6 +35,26 @@ body {
   color: var(--arena2);
 }
 
+/* Efectos navbar */
+.enlace-menu{
+  border-bottom: 2px solid transparent;
+}
+.navbar-nav .enlace-menu:hover{
+  color: var(--arena2) !important;
+  border-bottom: 2px solid var(--arena2);
+}
+
+
+
+
+/* CARRUSEL DE FOTOS*/
+
+.carousel-inner{
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
 .carousel-item img {
   height: 600px;
   object-fit: cover;
@@ -41,5 +66,19 @@ body {
   bottom: 1.5rem;
   border-radius: 8px;
   padding: 1rem 1.5rem;
+}
+
+.carousel-caption h5 {
   color: var(--arena2) !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-caption p {
+  color: #ffffff !important;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 0;
+
 }
