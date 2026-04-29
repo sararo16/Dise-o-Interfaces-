@@ -1,0 +1,45 @@
+:root {
+  --arena: #c2ab7e;
+  --arena2: #ffd06d;
+  --azul: #93a8a6;
+  --fondo: #424656;
+  --gris: #807a73;
+}
+
+/*Backgrounds*/
+body {
+  background-color: var(--azul);
+}
+.bg-fondo {
+  background-color: var(--fondo) !important;
+}
+
+.hero_up {
+  color: var(--arena);
+}
+
+.titulo {
+  color: var(--arena2);
+}
+
+.titulo2 {
+  color: var(--arena);
+}
+
+.subtitulo {
+  color: var(--arena2);
+}
+
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background: rgba(66, 70, 86, 0.75);
+  width: auto;
+  bottom: 1.5rem;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  color: var(--arena2) !important;
+}

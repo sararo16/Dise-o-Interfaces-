@@ -1,0 +1,31 @@
+/* ===== PALETA (de claro a oscuro) ===== */
+:root {
+  --verde1: #88cc88;  /* más claro */
+  --verde2: #2d882d;  /* medio */
+  --verde3: #004400;  /* más oscuro */
+
+  --fondo: #0f172a;
+  --texto: #e2e8f0;
+}
+
+/* ===== BACKGROUNDS ===== */
+.bg-verde1 { background-color: var(--verde1) !important; }
+.bg-verde2 { background-color: var(--verde2) !important; }
+.bg-verde3 { background-color: var(--verde3) !important; }
+
+/* ===== TEXTOS ===== */
+.text-verde1 { color: var(--verde1) !important; }
+.text-verde2 { color: var(--verde2) !important; }
+.text-verde3 { color: var(--verde3) !important; }
+
+
+/* ===== BASE ===== */
+
+.bg-fondo {
+  background-color: var(--fondo);
+}
+
+.text-base {
+  color: var(--texto);
+}
+
