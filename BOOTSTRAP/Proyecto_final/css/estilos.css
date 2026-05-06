@@ -1,21 +1,20 @@
-/* :root significa que estas variables están disponibles para toda la página web */
 :root {
-  --arena: #c2ab7e;      
-  --arena2: #ffd06d;     
-  --azul: #93a8a6;       
-  --fondo: #424656;      
-  --gris: #807a73;       
+  --arena: #c2ab7e;
+  --arena2: #ffd06d;
+  --azul: #93a8a6;
+  --azul2: #778191;
+  --fondo: #424656;
+  --gris: #807a73;
 }
 
-/* FONDOS (Backgrounds)                                                       */
 body {
   background-color: var(--azul);
 }
 .bg-azul {
-  background-color: var(--azul) !important;
+  background-color: var(--azul2) !important;
 }
 .bg-fondo {
-  background-color: var(--fondo) !important; 
+  background-color: var(--fondo) !important;
 }
 
 /* ESTILOS DE LOS TEXTOS DEL TÍTULO                                           */
@@ -36,23 +35,20 @@ body {
 }
 
 /* Efectos navbar */
-.enlace-menu{
+.enlace-menu {
   border-bottom: 2px solid transparent;
 }
-.navbar-nav .enlace-menu:hover{
+.navbar-nav .enlace-menu:hover {
   color: var(--arena2) !important;
   border-bottom: 2px solid var(--arena2);
 }
 
-
-
-
 /* CARRUSEL DE FOTOS*/
 
-.carousel-inner{
+.carousel-inner {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-item img {
@@ -91,5 +87,28 @@ body {
   font-size: 1.2rem;
   font-weight: 300;
   margin-bottom: 0;
+}
 
+/*HISTORIA*/
+
+.seccion-historia .card {
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.seccion-historia .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.seccion-historia .card-img-top {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+}
+
+.seccion-historia .card-title {
+  color: #004b87;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
