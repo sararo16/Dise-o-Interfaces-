@@ -86,73 +86,124 @@
         </div>
       </header>
       <!--fORMULARIO-->
-      <main class="row m-0 justify-content-center mb-5 px-3">
-        <div class="col-12 col-md-8 col-lg-6">
-          <div
-            class="card shadow-lg border-0 rounded-4 p-4 p-md-5 bg-fondo card-contacto"
-          >
+      <main class="row m-0 justify-content-center align-items-stretch mb-5 px-3 px-md-5">
+        
+        <div class="col-12 col-xl-5 mb-5 mb-xl-0 pe-xl-4">
+          <div class="card shadow-lg border-0 rounded-4 p-4 p-md-5 bg-fondo card-contacto h-100">
+            <h3 class="mb-4 text-white">Escríbenos</h3>
             <form>
               <div class="mb-3">
-                <label for="nombre" class="form-label fw-semibold"
-                  >Nombre completo</label
-                >
-                <input
-                  type="text"
-                  class="form-control bg-light"
-                  id="nombre"
-                  placeholder="Ej: María Fernández"
-                  required
-                />
+                <label for="nombre" class="form-label fw-semibold text-light">Nombre completo</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ej: María Fernández" required />
               </div>
-
               <div class="mb-3">
-                <label for="email" class="form-label fw-semibold"
-                  >Correo electrónico</label
-                >
-                <input
-                  type="email"
-                  class="form-control bg-light"
-                  id="email"
-                  placeholder="nombre@ejemplo.com"
-                  required
-                />
+                <label for="email" class="form-label fw-semibold text-light">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required />
               </div>
-
               <div class="mb-3">
-                <label for="asunto" class="form-label fw-semibold"
-                  >Asunto</label
-                >
-                <input
-                  type="text"
-                  class="form-control bg-light"
-                  id="asunto"
-                  placeholder="¿En qué te podemos ayudar?"
-                  required
-                />
+                <label for="asunto" class="form-label fw-semibold text-light">Asunto</label>
+                <input type="text" class="form-control" id="asunto" placeholder="¿En qué te podemos ayudar?" required />
               </div>
-
               <div class="mb-4">
-                <label for="mensaje" class="form-label fw-semibold"
-                  >Mensaje</label
-                >
-                <textarea
-                  class="form-control bg-light"
-                  id="mensaje"
-                  rows="5"
-                  placeholder="Escribe tu mensaje aquí..."
-                  required
-                ></textarea>
+                <label for="mensaje" class="form-label fw-semibold text-light">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
               </div>
-
               <div class="d-grid mt-2">
-                <button type="submit" class="btn btn-lg btn-arena shadow-sm">
+                <button type="submit" class="btn btn-lg shadow-sm fw-bold border-0" style="background-color: var(--arena2); color: var(--fondo);">
                   Enviar mensaje
                 </button>
               </div>
             </form>
           </div>
         </div>
+
+        <!--Mapa-->
+        <div class="col-12 col-xl-5 ps-xl-4 mt-5 mt-xl-0">
+          <div class="card shadow-lg border-0 rounded-4 p-4 p-md-5 bg-fondo card-contacto h-100 d-flex flex-column">
+            
+            <h3 class="mb-4 text-white">Dónde estamos</h3>
+            
+            <div class="rounded-4 overflow-hidden flex-grow-1" style="min-height: 400px;"> 
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11565.89007496174!2d-6.083383774421932!3d43.55503623770847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd36a1fe99f8b66b%3A0x29d709d516399f69!2sSan%20Juan%20de%20la%20Arena%2C%2033125%20Soto%20del%20Barco%2C%20Asturias!5e0!3m2!1ses!2ses!4v1763806430582!5m2!1ses!2ses"
+                style=
+                "width: 100%; height: 100%; border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+
       </main>
+
+      <section class="row m-0 py-5 bg-fondo justify-content-center">
+        <div class="col-12 col-lg-8">
+          <h3 class="mb-4 text-center text-white">Preguntas Frecuentes</h3>
+
+          <div class="accordion shadow" id="acordeonPreguntas" data-bs-theme="dark">            
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUno" aria-expanded="true" aria-controls="collapseUno">
+                  ¿Dónde puedo aparcar durante las fiestas?
+                </button>
+              </h2>
+              <div id="collapseUno" class="accordion-collapse collapse show" data-bs-parent="#acordeonPreguntas">
+                <div class="accordion-body text-light">
+                  A lo largo de todo el paseo del muelle se puede aparcar. Recomendamos llegar antes de las 19:00 para evitar aglomeraciones.
+                </div>
+              </div>
+            </div> <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDos" aria-expanded="false" aria-controls="collapseDos">
+                  ¿A qué hora se enciende la hoguera principal?
+                </button>
+              </h2>
+              <div id="collapseDos" class="accordion-collapse collapse" data-bs-parent="#acordeonPreguntas">
+                <div class="accordion-body text-light">
+                  La hoguera central se enciende exactamente a la medianoche (00:00) del día 23 de junio, marcando el inicio de la noche de San Juan.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
+                  ¿Es un evento apto para ir con niños pequeños?
+                </button>
+              </h2>
+              <div id="collapseTres" class="accordion-collapse collapse" data-bs-parent="#acordeonPreguntas">
+                <div class="accordion-body text-light">
+                  ¡Por supuesto! Durante la tarde hay pasacalles, hinchables y música tradicional perfecta para disfrutar en familia. Por la noche, hay zonas alejadas del fuego para ver la hoguera con seguridad.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+<footer class="row m-0 bg-dark py-4 align-items-center">
+        <div class="col-12 col-md-6 text-light text-center text-md-start px-5 mb-3 mb-md-0">
+          <p class="mb-0">Soto del barco | Asturias</p>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end px-5">
+          <img src="../imagenes/facebooks.png" class="img-fluid mx-2" alt="Facebook" width="40" height="40">
+          <img src="../imagenes/instagram.png" class="img-fluid mx-2" alt="Instagram" width="40" height="40">
+        </div>
+      </footer>
+
+    </div> <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
     </div>
   </body>
 </html>
